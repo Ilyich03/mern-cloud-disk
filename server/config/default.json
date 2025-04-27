@@ -1,0 +1,4 @@
+{
+    "serverPort": 5000,
+    "dbUrl": "mongodb+srv://valstep:valstep03@cloud.xlyafud.mongodb.net/"
+}   
