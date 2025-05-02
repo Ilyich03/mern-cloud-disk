@@ -1,12 +1,5 @@
-import { useState } from 'react'
+import React  from 'react'
 
-
-function App() {
- 
-  return (
-    <div> THIS IS RUNNING 
-    </div>
-  )
+export default function App() {
+  return <h1>IT'S ALIVE!</h1>;
 }
-
-export default App
