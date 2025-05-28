@@ -8,6 +8,7 @@ const config = require('config')
 
  router.post('/registration', 
      [
+         check('userName', "Username must be 3 to 12 characters").isLength({min:3, max:12}),
          check('email', "Incorrect email").isEmail(),
          check('password', 'Password must be longer than 3 and shorter than 12').isLength({min:3, max:12})
      ],
@@ -18,14 +19,14 @@ const config = require('config')
              return res.status(400).json({message: "Incorrect request", errors})
          }
 
-         const {email, password} = req.body  
+         const {userName, email, password} = req.body  
          const candidate = await User.findOne({email})
 
          if(candidate) {
              return res.status(400).json({message:`User with email ${email} already exists`})
          }
          const hashPassword = await bcrypt.hash(password, 8)
-         const user = new User({email, password: hashPassword})
+         const user = new User({userName, email, password: hashPassword})
          await user.save()
          return res.json({message: "User was created"})
 

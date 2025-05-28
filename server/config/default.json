@@ -1,5 +1,5 @@
 {
     "serverPort": 5000,
-    "dbUrl": "mongodb+srv://valstep:valstep03@cloud.xlyafud.mongodb.net/",
+    "dbUrl": "mongodb+srv://valstep:valstep03@cloud.95mgyb8.mongodb.net/",
     "secretKey": "mern-secret-key"
 }   
