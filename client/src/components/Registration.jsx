@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import { registration } from '../../actions/user'
-import Input from '../input/Input'
+import { registration } from '../actions/user'
+import Input from './Input'
 import { NavLink } from 'react-router-dom'
 
 const Registration = () => {
